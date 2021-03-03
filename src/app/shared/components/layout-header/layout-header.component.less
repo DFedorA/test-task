@@ -1,0 +1,36 @@
+.navbar {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  min-height: 10vh;
+  .active .menu__link::after {
+    content: '';
+    display: block;
+    width: 100%;
+    margin-top: 2px;
+    height: 2px;
+    background-color:#ff0000;
+    transition: width .3s;
+  }
+  .active .menu__link:hover::after {
+    width: 0;
+    transition: width .3s;
+  }
+
+}
+.menu{
+  &__item {
+    display: inline-block;
+    margin: 0 20px;
+
+  }
+  &__link{
+    transition: 0.3s all;
+    font-size: 20px;
+    color: #000;
+  }
+  &__link:hover{
+    color: #ff0000;
+  }
+
+}

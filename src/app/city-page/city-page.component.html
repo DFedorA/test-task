@@ -1,0 +1,15 @@
+<div *ngIf="Object.keys(articleWiki).length > 3; else loading">
+  <div class="city">
+    Твой город: {{ infoUser["city"] }}
+  </div>
+  <div class="wiki">
+    <div class="wiki__item" *ngFor="let page of  Object.keys(articleWiki) | slice:0:3; ">
+      <h2 class="wiki__title">{{page}}</h2>
+      <p class="wiki__text">{{articleWiki[page]}}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading">Идет загрузка...</div>
+</ng-template>

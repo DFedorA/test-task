@@ -1,0 +1,29 @@
+{
+  "/ipinfo.io": {
+    "target": "http://ipinfo.io/",
+    "secure": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/ipinfo.io": ""
+    },
+    "changeOrigin": true
+  },
+  "/en.wikipedia.org": {
+    "target": "https://en.wikipedia.org/",
+    "secure": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/en.wikipedia.org": ""
+    },
+    "changeOrigin": true
+  },
+  "/api.openweathermap.org": {
+    "target": "https://api.openweathermap.org/",
+    "secure": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api.openweathermap.org": ""
+    },
+    "changeOrigin": true
+  }
+}

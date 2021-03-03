@@ -1,0 +1,11 @@
+<div class="weather"  *ngIf="Object.keys(infoWeather).length != 0; else loading">
+  <h2 class="weather__title">{{weatherCity}}</h2>
+  <span class="weather__forecast" >{{weatherForecast}}&deg;</span>
+  <span class="weather__desc" >{{weatherDesc}}</span>
+  <span class="weather__icon" >
+    <img src="https://openweathermap.org/img/wn/{{weatherIcon}}@2x.png">
+  </span>
+</div>
+<ng-template #loading>
+  <div class="loading">Идет загрузка...</div>
+</ng-template>
