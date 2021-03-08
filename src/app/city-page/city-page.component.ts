@@ -30,13 +30,13 @@ export class CityPageComponent implements OnInit {
       this.infoUser = res;
     });
     this.pSub = this.appService.getInfoWiki().subscribe(res => {
-      const pages = res.query.allpages
+      const pages = res.query.allpages;
       for (let p in pages) {
         this.pSub = this.appService.getInfoWikiById(pages[p].pageid).subscribe(res => {
           const item = res.query.pages;
-          const keys = Object.keys(item)
-          this.articleWiki[item[keys[0]].title] = item[keys[0]].extract
-        })
+          const keys = Object.keys(item);
+          this.articleWiki[item[keys[0]].title] = item[keys[0]].extract;
+        });
       }
     });
   }
